@@ -2,11 +2,11 @@ version: '2'
 
 services:
   ns3:
+    stdin_open: true
+    tty: true
     build:
       context: ./files
     image: ns3
     container_name: ns3
     volumes:
-      - ./scratch:/workspace/source/ns-3.28/scratch
-      - ./outputs:/workspace/source/ns-3.28/outputs
-    command: miniproj_simu
+      - ./ns3-workspace:/workspace
