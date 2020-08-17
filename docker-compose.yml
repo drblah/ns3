@@ -5,8 +5,15 @@ services:
     stdin_open: true
     tty: true
     build:
-      context: ./files
+      context: ./files/ns3
     image: ns3
     container_name: ns3
     volumes:
       - ./ns3-workspace:/workspace
+
+#  apt-cacher-ng:
+#    build:
+#      context: ./files/apt-cacher-ng
+#    image: apt-cacher-ng
+#    container_name: apt-cacher-ng-ns3
+#    hostname: apt-cacher-ng-ns3

@@ -7,7 +7,7 @@ export PATH=${PATH}:${BAKE_HOME}:${BAKE_HOME}/build/bin
 export PYTHONPATH=${PYTHONPATH}:${BAKE_HOME}:${BAKE_HOME}/build/lib
 
 # Get NS3
-cd /workspace && bake.py configure -e ns-allinone-3.30
+cd /workspace && bake.py configure -e ns-allinone-3.31
 cd /workspace && bake.py check
 cd /workspace && bake.py download
 
