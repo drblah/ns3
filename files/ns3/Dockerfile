@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 # Setup bake
-RUN  echo 'Acquire::http { Proxy "http://10.0.0.111:3142"; };' >> /etc/apt/apt.conf.d/01proxy
+#RUN  echo 'Acquire::http { Proxy "http://10.0.0.111:3142"; };' >> /etc/apt/apt.conf.d/01proxy
 RUN apt-get update
 RUN apt-get install -y  \
     python \
@@ -29,7 +29,14 @@ RUN apt-get install -y  \
     python3-setuptools \
     python3-pygccxml \
     qt5-default \
-    gir1.2-gtk-3.0
+    gir1.2-gtk-3.0 \
+    libpcap-dev \
+    libc6-dbg \
+    libssl-dev \
+    flex \
+    bison \
+    libdb-dev \
+    bc
 
 RUN pip3 install cxxfilt
 
