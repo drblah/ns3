@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 # Setup bake
 #RUN  echo 'Acquire::http { Proxy "http://10.0.0.111:3142"; };' >> /etc/apt/apt.conf.d/01proxy
@@ -22,12 +22,10 @@ RUN apt-get install -y  \
     openmpi-common \
     openmpi-doc \ 
     libopenmpi-dev \
-    python3-distro \
     python3-requests \
     python3-pip \
     python3-dev \
     python3-setuptools \
-    python3-pygccxml \
     qt5-default \
     gir1.2-gtk-3.0 \
     libpcap-dev \
@@ -36,9 +34,11 @@ RUN apt-get install -y  \
     flex \
     bison \
     libdb-dev \
-    bc
+    bc \
+    wget \
+    libncurses5-dev
 
-RUN pip3 install cxxfilt
+RUN pip3 install cxxfilt distro pygccxml
 
 RUN mkdir /workspace
 #RUN git clone https://gitlab.com/nsnam/bake.git /workspace/bake
