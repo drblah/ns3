@@ -15,3 +15,6 @@ cd /workspace && bake.py download
 # Build NS3
 cd /workspace && bake.py build
 
+# Patch NS3-dce waf to use python3
+cd /workspace/source/ns-3-dce && git apply /waf.patch
+
