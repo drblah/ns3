@@ -36,7 +36,9 @@ RUN apt-get install -y  \
     libdb-dev \
     bc \
     wget \
-    libncurses5-dev
+    libncurses5-dev \
+    libnl-3-dev \
+    libnl-genl-3-dev
 
 RUN pip3 install cxxfilt distro pygccxml
 
@@ -57,6 +59,8 @@ RUN mkdir /workspace
 
 ADD setup_ns3.sh /bin/setup_ns3.sh
 RUN chmod +x /bin/setup_ns3.sh
+
+ADD waf.patch /waf.patch
 
 ENTRYPOINT [ "/bin/bash" ]
 CMD []
