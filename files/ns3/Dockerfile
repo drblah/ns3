@@ -62,6 +62,6 @@ ADD setup_ns3.sh /bin/setup_ns3.sh
 RUN chmod +x /bin/setup_ns3.sh
 
 ADD waf.patch /waf.patch
-
+ADD batctl-dce.patch /batctl-dce.patch
 ENTRYPOINT [ "/bin/bash" ]
 CMD []

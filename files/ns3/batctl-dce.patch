@@ -1,0 +1,8 @@
+32c32
+< CFLAGS += -Wall -W -std=gnu99 -fno-strict-aliasing -MD -MP
+---
+> CFLAGS += -Wall -W -std=gnu99 -fno-strict-aliasing -MD -MP -fPIC
+34c34
+< LDLIBS += -lm
+---
+> LDLIBS += -lm -pie -rdynamic
