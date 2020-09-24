@@ -8,9 +8,9 @@ export PYTHONPATH=${PYTHONPATH}:${BAKE_HOME}:${BAKE_HOME}/build/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${BAKE_HOME}/build/lib
 
 # Get NS3
-cd /workspace && bake.py configure -e dce-linux-dev-batman
-cd /workspace && bake.py check
-cd /workspace && bake.py download
+cd /workspace/bake && bake.py configure -e dce-linux-dev-batman
+cd /workspace/bake && bake.py check
+cd /workspace/bake && bake.py download
 
 # Build NS3
 cd /workspace && bake.py build
